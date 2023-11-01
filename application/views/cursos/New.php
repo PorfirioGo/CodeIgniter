@@ -24,4 +24,8 @@ class Codigofacilito extends CI_Controller { /*Lo primero que se tiene que tener
 
 ?>
 </body>
+
+<footer>  <!--AQUI SE REALIZA LA RAMA FOOTER EN GIT-->
+	<p>ESTE TEXTO ES COMO EJEMPLO PARA LA RAMA FOOTER</p>
+</footer>
 </html>
