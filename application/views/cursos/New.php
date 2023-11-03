@@ -20,10 +20,13 @@ class Codigofacilito extends CI_Controller { /*Lo primero que se tiene que tener
 		$this->load->model('codigofacilito_model'); /*Se carga el modelo('codigofacilito_model')*/ 
 	}
 
-
+}
 
 ?>
 </body>
+<label>
+	<p>AQUI SE AGREGA COMO EJEMPLO EL SIGUIENTE TEXTO EN VISUAL STUDIO CODE</p> <!--SE AGREGA EL SIGUIENTE TEXTO COMO EJMPLO DENTRO DE VISUAL STUDIO CODE-->
+</label>
 
 <footer>  <!--AQUI SE REALIZA LA RAMA FOOTER EN GIT-->
 	<p>ESTE TEXTO ES COMO EJEMPLO PARA LA RAMA FOOTER</p>
