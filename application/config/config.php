@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://codeigniter.test:90/'; /*Ruta donde esta la carpeta de CodeIgniter, esto es para
+$config['base_url'] = 'http://codeigniter.test:80/'; /*Ruta donde esta la carpeta de CodeIgniter, esto es para
 que todas las url´s relativas, en las que utilicemos el metodo de ['base_url'] sean relativas al Framework, CodeIgniter*/
  
 
