@@ -20,9 +20,17 @@ class Cursos extends CI_Controller { /*Lo primero que se tiene que tener dentro 
 		$this->load->model('codigofacilito_model'); /*Se carga el modelo('codigofacilito_model')*/ 
 	}
 	function index(){ /*Se crea la función index*/
-		$data['cursos'] = $this->codigofacilito_model->obtenerCurso(); /*Creamos variable $data['cursos']*/
+		$data['segmento'] = $this->uri->segment(3); /*Se genera el objeto segmento, que nos permitira a acceder a ciertos segmentos de la url (uri) que envia el usuario. Utilizando el metodo segment(va a retornar el segmento de la url dependiendo el indice que mande el usuario) */
 		$this->load->view('codigofacilito/headers');
-		$this->load->view('cursos/cursos',$data); /*Se pasa el arreglo $data*/
+
+				/*Se crea condicional para saber si el usuario esta mandando el segmento*/
+				if(!$data['segmento']){ /*Condicionamos la existencia del segmento sino existe podemos obtener todos los cursos*/
+					$data['cursos'] = $this->codigofacilito_model->obtenerCursos(); /*Creamos variable $data['cursos']*/
+				} 
+				else{ /*En caso de que no exista, el valor de $data['cursos'] tiene que cambiar  */
+					$data['cursos'] = $this->codigofacilito_model->obtenerCurso($data['segmento']); /*Creamos metodo obtenerCurso()que va a devolver unicamente un valor de la tabla, el valor que se indique en que parte de la url en el segmento 3, ese segmento  ya lo tenemos almacenado en esa variable, se lo vamos a enviar como parametro al metodo obtenerCurso  */
+				}
+				$this->load->view('cursos/cursos',$data); /*Se pasa el arreglo $data y se cargan las vistas de los cursos*/
 	}
 	function nuevo(){ /*Se crea una nueva función llamada (nuevo) */
 
